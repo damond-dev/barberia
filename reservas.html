@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservar — Barbería Reyes</title>
+  <link rel="icon" href="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779153664/Logo_Corona_y_Navaja_a0ccxd.png"
+    type="image/png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/reservas.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body class="reservas-page">
+  <div class="loading-overlay" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+  <div class="page-bg">
+    <video
+      src="https://res.cloudinary.com/dsqjvn7xw/video/upload/v1779145881/Liquid_energy_smoke_strands_loop_202605181909_xvr3pn.mp4"
+      autoplay muted loop playsinline></video>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img
+        src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779153664/Logo_Corona_y_Navaja_a0ccxd.png"
+        alt="Barbería Reyes" class="logo-img"> Barbería Reyes</a>
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      Volver
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="reserve-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow" id="hero-eyebrow">Reserva tu turno</div>
+      <h1 class="hero-title" id="hero-title">Elige tu momento,<br> nosotros nos encargamos del <em>resto</em></h1>
+      <p class="hero-subtitle" id="hero-subtitle">Selecciona el servicio, el barbero e introduce tus datos. Recibirás
+        una confirmación al instante.</p>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="reserve-section">
+    <div class="reserve-container">
+
+      <!-- Progress steps -->
+      <div class="steps" id="steps">
+        <div class="step active" data-step="1">
+          <div class="step-num">1</div>
+          <span class="step-label">Servicio</span>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-num">2</div>
+          <span class="step-label">Tus datos</span>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-num">3</div>
+          <span class="step-label">Confirmación</span>
+        </div>
+      </div>
+
+      <!-- Form card -->
+      <div class="form-card" id="form-card">
+
+        <!-- Step 1: Service & Barber -->
+        <div class="step-content" id="step-1">
+          <div class="section-group">
+            <div class="section-group-title">Servicio</div>
+            <div class="section-group-sub">¿Qué te gustaría?</div>
+            <div class="service-cards" id="service-cards">
+              <div class="service-option" data-service="corte" data-price="18" onclick="selectService(this)">
+                <div class="service-name">Corte clásico</div>
+                <div class="service-price">€18</div>
+              </div>
+              <div class="service-option" data-service="barba" data-price="12" onclick="selectService(this)">
+                <div class="service-name">Arreglo barba</div>
+                <div class="service-price">€12</div>
+              </div>
+              <div class="service-option" data-service="completo" data-price="28" onclick="selectService(this)">
+                <div class="service-name">Paquete completo</div>
+                <div class="service-price">€28</div>
+              </div>
+              <div class="service-option" data-service="tratamiento" data-price="15" onclick="selectService(this)">
+                <div class="service-name">Tratamiento</div>
+                <div class="service-price">€15</div>
+              </div>
+            </div>
+            <div class="form-error" id="service-error"><span>⚠</span> Por favor, selecciona un servicio.</div>
+          </div>
+
+          <div class="section-group">
+            <div class="section-group-title">Barbero</div>
+            <div class="section-group-sub">¿Quién te atiende? (opcional)</div>
+            <div class="barber-cards" id="barber-cards">
+              <div class="barber-option" data-barber="carlos" onclick="selectBarber(this)">
+                <div class="barber-avatar">CR</div>
+                <div class="barber-name">Carlos Reyes</div>
+                <div class="barber-specialty">Fade especialista</div>
+              </div>
+              <div class="barber-option" data-barber="miguel" onclick="selectBarber(this)">
+                <div class="barber-avatar">MG</div>
+                <div class="barber-name">Miguel García</div>
+                <div class="barber-specialty">Barba & perfilado</div>
+              </div>
+              <div class="barber-option" data-barber="david" onclick="selectBarber(this)">
+                <div class="barber-avatar">DL</div>
+                <div class="barber-name">David López</div>
+                <div class="barber-specialty">Estilo moderno</div>
+              </div>
+              <div class="barber-option" data-barber="javier" onclick="selectBarber(this)">
+                <div class="barber-avatar">JS</div>
+                <div class="barber-name">Javier Sanz</div>
+                <div class="barber-specialty">Clásico & ejecutivo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <div></div>
+            <button class="btn-submit" onclick="goStep(2)">
+              Continuar
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Personal Data -->
+        <div class="step-content" id="step-2" style="display:none;">
+          <form id="reserva-form" onsubmit="return false;">
+
+            <div class="section-group">
+              <div class="section-group-title">Tus datos</div>
+              <div class="section-group-sub">Para que el barbero te contacte.</div>
+              <div class="form-grid">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Nombre completo *</label>
+                    <input class="form-input" type="text" id="name" name="nombre" placeholder="Ej. Juan Martínez" />
+                    <div class="form-error" id="name-error"><span>⚠</span> Campo obligatorio.</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="phone">Teléfono *</label>
+                    <input class="form-input" type="tel" id="phone" name="telefono" placeholder="Ej. 612 345 678" />
+                    <div class="form-error" id="phone-error"><span>⚠</span> Teléfono obligatorio.</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="notes">Notas (opcional)</label>
+                  <textarea class="notes-textarea" id="notes" name="notas"
+                    placeholder="Alguna preferencia, allergies, o comentario..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="summary-box" id="summary-box">
+              <div class="summary-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                  <line x1="1" y1="10" x2="23" y2="10" />
+                </svg>
+                Resumen de tu reserva
+              </div>
+              <div class="summary-list" id="summary-list"></div>
+              <div class="summary-total">
+                <span>Total</span>
+                <span id="summary-total">€0</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-back" onclick="goStep(1)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Atrás
+              </button>
+              <button type="button" class="btn-submit" onclick="submitReservation()">
+                Confirmar reserva
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Confirmation -->
+      <div class="confirmation" id="confirmation">
+        <div class="confirm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h2 class="confirm-title">¡Reserva confirmada!</h2>
+        <div class="confirm-details" id="confirm-details">
+          <h4>Detalles de tu cita</h4>
+        </div>
+        <br /><br />
+        <a href="index.html" class="btn-submit" style="display:inline-flex; margin: 0 auto;">
+          Volver al inicio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Barbería Reyes · <a href="index.html">Volver al inicio</a></p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/reservas.js"></script>
+
+</body>
+
+</html>

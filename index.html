@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barbería Reyes — Corte con estilo</title>
+  <link rel="icon" href="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779153664/Logo_Corona_y_Navaja_a0ccxd.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body class="no-js">
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo"><img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779153664/Logo_Corona_y_Navaja_a0ccxd.png" alt="Barbería Reyes" class="logo-img"> Barbería Reyes</a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#sobre">Nosotros</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#reseñas">Reseñas</a></li>
+  </ul>
+  <a href="reservas.html" class="btn-reserve">Reservar</a>
+  <button class="nav-mobile-btn" onclick="toggleMobileMenu()">Menú</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()">✕</button>
+  <a href="index.html" onclick="toggleMobileMenu()">Inicio</a>
+  <a href="#servicios" onclick="toggleMobileMenu()">Servicios</a>
+  <a href="#sobre" onclick="toggleMobileMenu()">Nosotros</a>
+  <a href="#galeria" onclick="toggleMobileMenu()">Galería</a>
+  <a href="#reseñas" onclick="toggleMobileMenu()">Reseñas</a>
+  <a href="reservas.html" class="btn-primary" onclick="toggleMobileMenu()">Reservar ahora</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <video src="https://res.cloudinary.com/dsqjvn7xw/video/upload/v1779145881/Liquid_energy_smoke_strands_loop_202605181909_xvr3pn.mp4" autoplay muted loop playsinline></video>
+  </div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="hero-eyebrow">Barbería Premium · Desde 2018</div>
+    <h1 class="hero-title" id="hero-title">Tu estilo,<br> nuestra <em>pasión</em></h1>
+    <p class="hero-subtitle" id="hero-subtitle">
+      En Barbería Reyes combinamos técnicas clásicas con estilo moderno.
+      Cada corte es una obra diseñada para ti.
+    </p>
+    <div class="hero-actions" id="hero-actions">
+      <a href="reservas.html" class="btn-primary">
+        Hacer reserva
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#servicios" class="btn-secondary">Ver servicios</a>
+    </div>
+
+    <div class="hero-stats reveal" id="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="12000">0</div>
+        <div class="hero-stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="8">0</div>
+        <div class="hero-stat-label">Años de experiencia</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="4.9">0</div>
+        <div class="hero-stat-label">Puntuación promedio</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">Scroll</div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+
+  <div class="servicios-grid">
+    <div class="servicio-card reveal reveal-delay-1">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="6" r="3"/><path d="M8.12 8.12L12 12"/><path d="M20 4L8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8L20 20"/>
+        </svg>
+      </div>
+      <h3 class="servicio-name">Corte clásico</h3>
+      <p class="servicio-desc">Técnica precisa con tijera y máquina. Fade, pompadour, undercut o el estilo que prefieras.</p>
+      <div class="servicio-price"><span class="price">€18</span><span class="from">desde</span></div>
+    </div>
+
+    <div class="servicio-card reveal reveal-delay-2">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"/><line x1="4" y1="21" x2="20" y2="21"/>
+        </svg>
+      </div>
+      <h3 class="servicio-name">Arreglo de barba</h3>
+      <p class="servicio-desc">Perfilado, aceite y peine. Definimos tu barba con la precisión de un artista.</p>
+      <div class="servicio-price"><span class="price">€12</span><span class="from">desde</span></div>
+    </div>
+
+    <div class="servicio-card reveal reveal-delay-3">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <h3 class="servicio-name">Paquete completo</h3>
+      <p class="servicio-desc">Corte + barba + tratamiento capilar. La experiencia Reyes completa.</p>
+      <div class="servicio-price"><span class="price">€28</span><span class="from">desde</span></div>
+    </div>
+
+    <div class="servicio-card reveal reveal-delay-4">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <h3 class="servicio-name">Tratamiento capilar</h3>
+      <p class="servicio-desc">Masaje cuero cabelludo, mascarilla y secado con productos premium.</p>
+      <div class="servicio-price"><span class="price">€15</span><span class="from">desde</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section class="sobre" id="sobre">
+  <div class="sobre-text">
+    <div class="section-label">Nuestra historia</div>
+    <h2 class="section-title reveal">Más que una barbería, una comunidad</h2>
+    <p class="reveal-left reveal-delay-1">Fundada en 2018, Barbería Reyes nació con una idea clara: ofrecer un espacio donde cada hombre pueda sentirse seguro de su estilo. No somos solo un local, somos el punto de encuentro para quienes valoran la tradición y la calidad.</p>
+    <p class="reveal-left reveal-delay-2">Nuestros barberos están certificados y dominan técnicas que van desde los clásicos cortes militares hasta los estilos más actuales de la calle. Cada servicio es personalizado.</p>
+
+    <div class="sobre-stats reveal reveal-delay-3">
+      <div class="stat-item">
+        <div class="stat-number">12k+</div>
+        <div class="stat-label">Clientes atendidos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Barberos expertos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.9</div>
+        <div class="stat-label">Google rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">8</div>
+        <div class="stat-label">Años abiertos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sobre-img reveal-right reveal-delay-2">
+    <img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779149337/Gemini_Generated_Image_45xpck45xpck45xp_el8la8.png" alt="Barbería Reyes" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+</div>
+</section>
+
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria" id="galeria">
+  <div class="galeria-header">
+    <div class="section-label">Nuestros trabajos</div>
+    <h2 class="section-title reveal">Galería</h2>
+  </div>
+
+  <div class="galeria-grid">
+    <div class="galeria-item reveal-scale">
+      <img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779149347/Gemini_Generated_Image_egd8lsegd8lsegd8_od8hxo.png" alt="Galería 1" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="galeria-item reveal-scale reveal-delay-1">
+      <img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779149349/Gemini_Generated_Image_7do6qs7do6qs7do6_mubl5h.png" alt="Galería 2" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="galeria-item reveal-scale reveal-delay-2">
+      <img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779149364/Gemini_Generated_Image_5fpgb85fpgb85fpg_gnhven.png" alt="Galería 3" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="reseñas" id="reseñas">
+  <div class="reseñas-header">
+    <div class="section-label">Voces reales</div>
+    <h2 class="section-title reveal">Lo que dicen nuestros clientes</h2>
+  </div>
+
+  <div class="reseñas-grid">
+    <div class="reseña-card reveal-left reveal-delay-1">
+      <div class="reseña-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="reseña-text">"El mejor fade que me han hecho en la vida. Carlos me dejó exactamente como lo quería. El ambiente es increíble y el precio muy justo para la calidad que ofrecen."</p>
+      <div class="reseña-author">
+        <div class="reseña-avatar">MR</div>
+        <div>
+          <div class="reseña-author-name">Mario R.</div>
+          <div class="reseña-date">Cliente habitual</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reseña-card reveal-right reveal-delay-2">
+      <div class="reseña-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="reseña-text">"Llevo viniendo 3 años y nunca me han decepcionado. La barba siempre queda perfecta y el trato es de primera. Mi sitio de confianza sin duda."</p>
+      <div class="reseña-author">
+        <div class="reseña-avatar">JL</div>
+        <div>
+          <div class="reseña-author-name">Javier L.</div>
+          <div class="reseña-date">Cliente desde 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reseña-card reveal-scale reveal-delay-3">
+      <div class="reseña-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="reseña-text">"Encontré Reyes por casualidad y ahora no voy a otro lado. El ambiente, la música, los cocktails que ofrecen... es toda una experiencia, no solo un corte."</p>
+      <div class="reseña-author">
+        <div class="reseña-avatar">AP</div>
+        <div>
+          <div class="reseña-author-name">Andrea Pérez</div>
+          <div class="reseña-date">Hace 3 semanas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-form-container reveal">
+    <h3 class="review-form-title">Comparte tu experiencia</h3>
+    <form class="review-form" id="reviewForm">
+      <div class="star-rating">
+        <span class="star-label">Tu calificación:</span>
+        <div class="stars-input" id="starsInput">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="ratingValue" name="rating" value="0">
+      </div>
+      <div class="form-group">
+        <input type="text" id="reviewName" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <textarea id="reviewText" placeholder="Tu opinión sobre Barbería Reyes..." required></textarea>
+      </div>
+      <button type="submit" class="review-submit-btn">Publicar</button>
+    </form>
+  </div>
+
+  <button class="view-all-reviews-btn" id="viewAllReviewsBtn">
+    Ver todas las reseñas
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+
+  <div class="all-reviews-section" id="allReviewsSection">
+    <div class="all-reviews-header">
+      <h3>Todas las reseñas</h3>
+      <button class="close-reviews-btn" id="closeReviewsBtn">×</button>
+    </div>
+    <div class="all-reviews-list" id="allReviewsList">
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg">
+    <video src="https://res.cloudinary.com/dsqjvn7xw/video/upload/v1779145881/Liquid_energy_smoke_strands_loop_202605181909_xvr3pn.mp4" autoplay muted loop playsinline></video>
+  </div>
+  <div class="cta-content">
+    <div class="section-label">¿Listo?</div>
+    <h2 class="section-title reveal">Reserva tu turno hoy</h2>
+    <p class="cta-sub reveal reveal-delay-1">Selecciona fecha, hora y barbero. Así de fácil.</p>
+    <a href="reservas.html" class="btn-primary reveal reveal-delay-2">
+      Hacer reserva
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand reveal-left">
+<a href="index.html" class="nav-logo"><img src="https://res.cloudinary.com/dsqjvn7xw/image/upload/v1779153664/Logo_Corona_y_Navaja_a0ccxd.png" alt="Barbería Reyes" class="logo-img"> Barbería Reyes</a>
+      <p>Barbería premium en el corazón de la ciudad. Tradición, estilo y la mejor atención desde 2018.</p>
+    </div>
+    <div class="footer-col reveal reveal-delay-1">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre">Nosotros</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal reveal-delay-2">
+      <h4>Horario</h4>
+      <ul>
+        <li><a href="#">Lun — Vie: 9:00 — 21:00</a></li>
+        <li><a href="#">Sáb: 10:00 — 20:00</a></li>
+        <li><a href="#">Dom: 11:00 — 18:00</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal reveal-delay-3">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">Calle Mayor 42, Madrid</a></li>
+        <li><a href="tel:+34912345678">+34 912 345 678</a></li>
+        <li><a href="mailto:hola@reyesbarbershop.com">hola@reyesbarbershop.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Barbería Reyes. Todos los derechos reservados.</span>
+    <span>Diseñado con estilo</span>
+  </div>
+</footer>
+
+<script>document.body.classList.remove('no-js');</script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/services-orbital.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
